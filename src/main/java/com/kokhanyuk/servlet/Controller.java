@@ -1,6 +1,7 @@
 package com.kokhanyuk.servlet;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,6 +14,8 @@ import java.util.ResourceBundle;
 /**
  * by Alex on 5/18/2016.
  */
+
+@WebServlet("/controller")
 public class Controller extends HttpServlet {
 
 
@@ -156,34 +159,34 @@ public class Controller extends HttpServlet {
 //    }
 
 
-    public String filter(String message) {
-
-        if (message == null)
-            return (null);
-
-        char content[] = new char[message.length()];
-        message.getChars(0, message.length(), content, 0);
-        StringBuilder result = new StringBuilder(content.length + 50);
-        for (int i = 0; i < content.length; i++) {
-            switch (content[i]) {
-                case '<':
-                    result.append("&lt;");
-                    break;
-                case '>':
-                    result.append("&gt;");
-                    break;
-                case '&':
-                    result.append("&amp;");
-                    break;
-                case '"':
-                    result.append("&quot;");
-                    break;
-                default:
-                    result.append(content[i]);
-            }
-        }
-        return (result.toString());
-
-    }
+//    public String filter(String message) {
+//
+//        if (message == null)
+//            return (null);
+//
+//        char content[] = new char[message.length()];
+//        message.getChars(0, message.length(), content, 0);
+//        StringBuilder result = new StringBuilder(content.length + 50);
+//        for (int i = 0; i < content.length; i++) {
+//            switch (content[i]) {
+//                case '<':
+//                    result.append("&lt;");
+//                    break;
+//                case '>':
+//                    result.append("&gt;");
+//                    break;
+//                case '&':
+//                    result.append("&amp;");
+//                    break;
+//                case '"':
+//                    result.append("&quot;");
+//                    break;
+//                default:
+//                    result.append(content[i]);
+//            }
+//        }
+//        return (result.toString());
+//
+//    }
 
 }

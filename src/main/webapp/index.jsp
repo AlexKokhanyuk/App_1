@@ -8,11 +8,6 @@
 
 <div class="box" align='center'>
     <p class="text1">My App One Hello!</p>
-    <%--<form class="test" action="index.html" method="post">--%>
-    <%--<div class="message">--%>
-    <%--</div>--%>
-    <%--<button type="submit" name="submit">Open Cookies</button>--%>
-    <%--</form>--%>
 
     <form action="/controller"  method="post">
         First Name:
